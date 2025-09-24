@@ -1,1 +1,37 @@
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@theme {
+  /* Color */
+  --color-primary: #bea67c;
+  --color-dark: #000000;
+  --color-gray: #464646;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer components {
+  .heading-1 {
+    @apply font-bold text-3xl leading-tight lg:text-5xl lg:leading-snug;
+  }
+  .heading-2 {
+    @apply font-bold text-2xl leading-snug lg:text-4xl;
+  }
+  .heading-3 {
+    @apply font-bold text-xl lg:text-2xl;
+  }
+  .body-text {
+    @apply font-normal text-base leading-relaxed lg:text-lg;
+  }
+  .button-text {
+    @apply font-bold text-sm uppercase tracking-wide lg:text-base;
+  }
+}
