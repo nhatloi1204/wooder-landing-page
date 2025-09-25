@@ -18,20 +18,20 @@ body {
   font-style: normal;
 }
 
-@layer components {
-  .heading-1 {
-    @apply font-bold text-3xl leading-tight lg:text-5xl lg:leading-snug;
-  }
-  .heading-2 {
-    @apply font-bold text-2xl leading-snug lg:text-4xl;
-  }
-  .heading-3 {
-    @apply font-bold text-xl lg:text-2xl;
-  }
-  .body-text {
-    @apply font-normal text-base leading-relaxed lg:text-lg;
-  }
-  .button-text {
-    @apply font-bold text-sm uppercase tracking-wide lg:text-base;
-  }
+.swiper-pagination-bullet {
+  background-color: #d1d0d0;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+/* Dot active */
+.swiper-pagination-bullet-active {
+  background-color: #bea67c !important;
+  opacity: 1 !important;
+  transform: scale(1.2);
+}
+
+.custom-pagination {
+  left: 3.75rem !important;
+  bottom: 1.5rem !important;
 }
