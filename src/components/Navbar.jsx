@@ -53,7 +53,7 @@ export default function Navbar() {
             </Disclosure.Button>
 
             {/* Desktop menu */}
-            <nav className='hidden md:flex gap-10 md:font-bold md:items-end md:pb-2'>
+            <nav className='hidden md:flex gap-10 md:font-bold md:items-end md:pb-2 tracking-wider'>
               {navLinks.map(link => (
                 <a
                   key={link.id}
