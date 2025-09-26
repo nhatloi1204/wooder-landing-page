@@ -35,3 +35,6 @@ body {
     @apply font-bold text-sm uppercase tracking-wide lg:text-base;
   }
 }
+html {
+  scroll-behavior: smooth;
+}

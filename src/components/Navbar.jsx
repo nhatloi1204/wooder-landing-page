@@ -25,7 +25,11 @@ export default function Navbar() {
           }
         })
       },
-      { threshold: 0.6 }, // section phải chiếm >=60% viewport mới được tính là "active"
+      {
+        root: null,
+        rootMargin: '-50% 0px -50% 0px',
+        threshold: 0,
+      },
     )
 
     navLinks.forEach(link => {
@@ -37,7 +41,10 @@ export default function Navbar() {
   }, [])
 
   return (
-    <Disclosure as='header' className='sticky top-0 z-50 bg-dark text-white'>
+    <Disclosure
+      as='header'
+      className='fixed left-0 w-full top-0 z-50 bg-dark text-white'
+    >
       {({ open }) => (
         <>
           {/* Desktop + Mobile bar */}
