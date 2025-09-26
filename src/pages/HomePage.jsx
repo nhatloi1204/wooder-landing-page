@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar'
 import Hero from '../sections/Hero'
+import ProductsSection from '../sections/Products'
 
 export default function HomePage() {
   return (
@@ -8,6 +9,7 @@ export default function HomePage() {
         <Navbar />
       </header>
       <Hero />
+      <ProductsSection />
     </>
   )
 }
