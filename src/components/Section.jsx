@@ -1,9 +1,14 @@
-import { Container } from './Container'
+import Container from './Container'
 
-export function Section({ children, className = '' }) {
+function Section({ children, className = '', id = '' }) {
   return (
-    <section className={`py-[60px] md:py-[90px] lg:py-[120px] ${className}`}>
+    <section
+      className={`py-[60px] md:py-[90px] lg:py-[120px] ${className}`}
+      id={id}
+    >
       <Container> {children} </Container>{' '}
     </section>
   )
 }
+
+export default Section

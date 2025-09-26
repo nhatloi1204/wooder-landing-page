@@ -1,4 +1,4 @@
-export default function Container({ children, className = '' }) {
+function Container({ children, className = '' }) {
   return (
     <div
       className={`
@@ -15,3 +15,5 @@ export default function Container({ children, className = '' }) {
     </div>
   )
 }
+
+export default Container
