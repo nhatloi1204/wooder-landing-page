@@ -3,6 +3,7 @@ import Hero from '../sections/Hero'
 import ProductsSection from '../sections/Products'
 import About from '../sections/About'
 import Gallery from '../sections/Gallery'
+import News from '../sections/News'
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <ProductsSection />
       <About />
       <Gallery />
+      <News />
     </>
   )
 }
