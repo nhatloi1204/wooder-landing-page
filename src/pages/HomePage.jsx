@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar'
 import Hero from '../sections/Hero'
 import ProductsSection from '../sections/Products'
 import About from '../sections/About'
+import Gallery from '../sections/Gallery'
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Hero />
       <ProductsSection />
       <About />
+      <Gallery />
     </>
   )
 }

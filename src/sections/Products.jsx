@@ -129,7 +129,7 @@ export default function ProductsSection() {
         />
 
         {/* Quality */}
-        <div className='text-center mt-24'>
+        <div className='text-center'>
           <h2 className='text-4xl lg:text-5xl font-extrabold mb-6'>
             WOODER – IS QUALITY
           </h2>

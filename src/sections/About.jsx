@@ -4,7 +4,7 @@ import aboutImg from '../assets/about.jpg'
 export default function ProductItem() {
   return (
     <Section id='about'>
-      <div className='flex flex-col lg:flex-row items-center gap-12 mb-20'>
+      <div className='flex flex-col lg:flex-row items-center gap-12'>
         {/* Text block */}
         <div className='lg:w-5/12'>
           {/* HEADING */}
