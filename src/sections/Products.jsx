@@ -7,29 +7,36 @@ import quality2 from '../assets/quality2.jpg'
 import quality3 from '../assets/quality3.jpg'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import VideoSection from './VideoSection'
 
 function ProductItem({ title, text, image, reverse = false }) {
   return (
     <div
-      className={`flex flex-col md:flex-row items-center gap-12 mb-20 ${
-        reverse ? 'md:flex-row-reverse' : ''
+      className={`flex flex-col lg:flex-row items-center gap-12 mb-20 ${
+        reverse ? 'lg:flex-row-reverse' : ''
       }`}
     >
       {/* Text block */}
-      <div className={`md:w-5/12 ${reverse ? 'text-right' : 'text-left'}`}>
+      <div className={`lg:w-5/12 ${reverse ? 'text-right' : 'text-left'}`}>
+        {/* HEADING */}
         <div
           className={`flex items-center gap-4 mb-6 ${
             reverse ? 'justify-end' : ''
           }`}
         >
-          {!reverse && <span className='w-8 h-[3px] bg-primary'></span>}
-          <h2 className='text-3xl md:text-4xl font-bold'>{title}</h2>
-          {reverse && <span className='w-8 h-[3px] bg-primary'></span>}
+          {!reverse && (
+            <span className='lg:w-8 lg:h-[3px] lg:bg-primary lg:block hidden'></span>
+          )}
+          <h2 className='text-4xl lg:text-5xl font-extrabold'>{title}</h2>
+          {reverse && (
+            <span className='lg:w-8 lg:h-[3px] lg:bg-primary lg:block hidden'></span>
+          )}
         </div>
 
+        {/* BODY TEXT */}
         <p className='text-gray-600 leading-relaxed mb-8'>{text}</p>
 
-        {/* Learn More link */}
+        {/* Learn More btn */}
         <a
           href='#'
           className='group relative inline-flex items-center gap-2 font-semibold uppercase text-dark'
@@ -38,13 +45,12 @@ function ProductItem({ title, text, image, reverse = false }) {
           <span className='transition-transform duration-300 group-hover:translate-x-1'>
             →
           </span>
-          {/* underline */}
           <span className='absolute left-0 -bottom-1 h-[2px] w-6 bg-primary transition-all duration-300 group-hover:w-full'></span>
         </a>
       </div>
 
       {/* Image block */}
-      <div className='md:w-7/12'>
+      <div className='lg:w-7/12'>
         <img
           src={image}
           alt={title}
@@ -60,7 +66,7 @@ function QualityItem({ image, title }) {
 
   return (
     <div className='flex flex-col items-center text-center'>
-      {/* IMAGE WRAPPER */}
+      {/* IMAGE */}
       <div
         className='w-40 h-40 overflow-hidden rounded-full mb-3 cursor-pointer group relative'
         onClick={() => setOpen(true)}
@@ -71,12 +77,11 @@ function QualityItem({ image, title }) {
           className='w-full h-full object-cover transition-transform duration-300 group-hover:scale-110'
         />
       </div>
-
-      {/* gold bar dưới ảnh */}
+      {/* GOLD BAR */}
       <span className='block w-8 h-[2px] bg-primary mb-4'></span>
 
       {/* TITLE */}
-      <p className='font-semibold'>{title}</p>
+      <p className='font-normal'>{title}</p>
 
       {/* MODAL IMAGE */}
       <AnimatePresence>
@@ -106,41 +111,44 @@ function QualityItem({ image, title }) {
 
 export default function ProductsSection() {
   return (
-    <Section id='products'>
-      {/* Furniture */}
-      <ProductItem
-        title='FURNITURE'
-        text='Wooder utilizes materials otherwise left behind, rendered useless in their original intent. By creating new pieces made one reclaimed barnwood.'
-        image={furnitureImg}
-      />
+    <>
+      <Section id='products'>
+        {/* Furniture */}
+        <ProductItem
+          title='FURNITURE'
+          text='Wooder utilizes materials otherwise left behind, rendered useless in their original intent. By creating new pieces made one reclaimed barnwood.'
+          image={furnitureImg}
+        />
 
-      {/* Decor */}
-      <ProductItem
-        title='DECOR'
-        text='We make all types of wooden decor as per design given by Architect, Interior designer, contractor which is suitable your premises.'
-        image={decorImg}
-        reverse
-      />
+        {/* Decor */}
+        <ProductItem
+          title='DECOR'
+          text='We make all types of wooden decor as per design given by Architect, Interior designer, contractor which is suitable your premises.'
+          image={decorImg}
+          reverse
+        />
 
-      {/* Quality */}
-      <div className='text-center mt-24'>
-        <h2 className='text-3xl md:text-4xl font-bold mb-6'>
-          WOODER – IS QUALITY
-        </h2>
-        <span className='block w-20 h-[3px] bg-primary mx-auto mb-6'></span>
+        {/* Quality */}
+        <div className='text-center mt-24'>
+          <h2 className='text-4xl lg:text-5xl font-extrabold mb-6'>
+            WOODER – IS QUALITY
+          </h2>
+          <span className='block w-20 h-[3px] bg-primary mx-auto mb-6'></span>
 
-        <p className='text-gray max-w-2xl mx-auto mb-12'>
-          Wooder utilizes materials otherwise left behind, rendered useless in
-          their original intent, drawing on pieces made reclaimed barnwood
-          rendered useless in their original intent.
-        </p>
+          <p className='text-gray max-w-2xl mx-auto mb-12'>
+            Wooder utilizes materials otherwise left behind, rendered useless in
+            their original intent, drawing on pieces made reclaimed barnwood
+            rendered useless in their original intent.
+          </p>
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-12'>
-          <QualityItem image={quality1} title='Innovative Design' />
-          <QualityItem image={quality2} title='High-level Skills' />
-          <QualityItem image={quality3} title='Quality Products' />
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-12'>
+            <QualityItem image={quality1} title='Innovative Design' />
+            <QualityItem image={quality2} title='High-level Skills' />
+            <QualityItem image={quality3} title='Quality Products' />
+          </div>
         </div>
-      </div>
-    </Section>
+      </Section>
+      <VideoSection />
+    </>
   )
 }
