@@ -67,23 +67,23 @@ export default function HeroSection() {
         <button
           className='uppercase text-xs mt-4 py-3 lg:text-sm px-6 lg:py-4 lg:tracking-widest lg:mt-10 lg:px-14 
              border 
-             hover:bg-primary hover:text-dark hover:border-primary
-             active:scale-95 transition-transform duration-150 active:text-dark active:bg-primary active:border-primary'
+             hover:bg-primary hover:text-white hover:border-primary hover:cursor-pointer
+             active:scale-95 transition-transform duration-150 active:bg-primary active:border-primary'
         >
-          Learn more
+          Learn more →
         </button>
       </div>
 
       {/* Custom navigation arrows */}
       <button
         ref={prevRef}
-        className='absolute bottom-6 right-20 z-20 cursor-pointer p-3 bg-dark/50 rounded-full hover:bg-dark/80 transition'
+        className='absolute bottom-6 right-20 z-20 cursor-pointer p-3 bg-dark/50 rounded-full hover:bg-primary active:bg-primary transition'
       >
         <ArrowLeft className='w-5 h-5 text-white' />
       </button>
       <button
         ref={nextRef}
-        className='absolute bottom-6 right-6 z-20 cursor-pointer p-3 bg-dark/50 rounded-full hover:bg-dark/80 transition'
+        className='absolute bottom-6 right-6 z-20 cursor-pointer p-3 bg-dark/50 rounded-full hover:bg-primary transition active:bg-primary '
       >
         <ArrowRight className='w-5 h-5 text-white' />
       </button>

@@ -35,3 +35,11 @@ body {
   left: 3.75rem !important;
   bottom: 1.5rem !important;
 }
+
+.custom-pagination.swiper-pagination-horizontal {
+  width: auto !important;
+  display: inline-flex !important;
+}
+html {
+  scroll-behavior: smooth;
+}
