@@ -2,20 +2,31 @@ import { useState } from 'react'
 import Section from '../components/Section'
 import { motion } from 'framer-motion'
 
+// import news images
+import news1 from '../assets/newsImg/news1.jpg'
+import news2 from '../assets/newsImg/news2.jpg'
+import news3 from '../assets/newsImg/news3.jpg'
+
+// import carousel images
+import carousel1 from '../assets/carouselImg/carousel1.jpg'
+import carousel2 from '../assets/carouselImg/carousel2.jpg'
+import carousel3 from '../assets/carouselImg/carousel3.jpg'
+import carousel4 from '../assets/carouselImg/carousel4.jpg'
+
 // fake data
 const newsData = [
   {
     id: 1,
     title: 'Where does it come from?',
     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis natus illo consequuntur, quia eos soluta iure sunt cum a saepe sed harum, sint eius error sapiente ipsam nulla atque cumque?',
-    image: 'src/assets/newsImg/news1.jpg',
+    image: news1,
     category: 'Technology',
   },
   {
     id: 2,
     title: 'There are many variations of passages',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ipsam error perspiciatis quisquam neque optio culpa, saepe dolor at debitis beatae omnis tempora, praesentium cumque aut officia sapiente, reiciendis ea.',
-    image: 'src/assets/newsImg/news2.jpg',
+    image: news2,
     category: 'Fashion',
   },
   {
@@ -23,17 +34,12 @@ const newsData = [
     title:
       'It is a long established fact that a reader It has roots in a piece of...',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, veritatis repudiandae, consequatur velit eos, quod ducimus facilis dignissimos a voluptates iste ut. Blanditiis obcaecati dolorum ratione quas doloribus repellat ex.',
-    image: 'src/assets/newsImg/news3.jpg',
+    image: news3,
     category: 'Technology',
   },
 ]
 
-const carouselImages = [
-  'src/assets/carouselImg/carousel1.jpg',
-  'src/assets/carouselImg/carousel2.jpg',
-  'src/assets/carouselImg/carousel3.jpg',
-  'src/assets/carouselImg/carousel4.jpg',
-]
+const carouselImages = [carousel1, carousel2, carousel3, carousel4]
 
 export default function News() {
   const [filter, setFilter] = useState('All')
