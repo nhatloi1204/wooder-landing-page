@@ -1,10 +1,10 @@
 // ProductsSection.jsx
 import Section from '../components/Section'
-import furnitureImg from '../assets/furniture.jpg'
-import decorImg from '../assets/decor.jpg'
-import quality1 from '../assets/quality1.jpg'
-import quality2 from '../assets/quality2.jpg'
-import quality3 from '../assets/quality3.jpg'
+import furnitureImg from '../assets/productsImg/furniture.jpg'
+import decorImg from '../assets/productsImg/decor.jpg'
+import quality1 from '../assets/productsImg/quality1.jpg'
+import quality2 from '../assets/productsImg/quality2.jpg'
+import quality3 from '../assets/productsImg/quality3.jpg'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import VideoSection from './VideoSection'
@@ -16,7 +16,6 @@ function ProductItem({ title, text, image, reverse = false }) {
         reverse ? 'lg:flex-row-reverse' : ''
       }`}
     >
-      {/* Text block */}
       <div className={`lg:w-5/12 ${reverse ? 'text-right' : 'text-left'}`}>
         {/* HEADING */}
         <div
@@ -49,12 +48,13 @@ function ProductItem({ title, text, image, reverse = false }) {
         </a>
       </div>
 
-      {/* Image block */}
+      {/* Image */}
       <div className='lg:w-7/12'>
         <img
           src={image}
           alt={title}
           className='w-full rounded-lg transition-transform duration-300 hover:scale-105'
+          loading='lazy'
         />
       </div>
     </div>
@@ -75,8 +75,10 @@ function QualityItem({ image, title }) {
           src={image}
           alt={title}
           className='w-full h-full object-cover transition-transform duration-300 group-hover:scale-110'
+          loading='lazy'
         />
       </div>
+
       {/* GOLD BAR */}
       <span className='block w-8 h-[2px] bg-primary mb-4'></span>
 
@@ -101,6 +103,7 @@ function QualityItem({ image, title }) {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.3 }}
+              loading='lazy'
             />
           </motion.div>
         )}

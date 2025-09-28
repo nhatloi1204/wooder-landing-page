@@ -1,11 +1,10 @@
 import Section from '../components/Section'
-import aboutImg from '../assets/about.jpg'
+import aboutImg from '../assets/aboutImg/about.jpg'
 
 export default function ProductItem() {
   return (
     <Section id='about'>
       <div className='flex flex-col lg:flex-row items-center gap-12'>
-        {/* Text block */}
         <div className='lg:w-5/12'>
           {/* HEADING */}
           <div className='flex items-center gap-4 mb-6'>
@@ -36,12 +35,13 @@ export default function ProductItem() {
           </a>
         </div>
 
-        {/* Image block */}
+        {/* Image */}
         <div className='lg:w-7/12'>
           <img
             src={aboutImg}
             alt='aboutImg'
             className='w-full rounded-lg transition-transform duration-300 hover:scale-105'
+            loading='lazy'
           />
         </div>
       </div>

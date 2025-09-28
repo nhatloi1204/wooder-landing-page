@@ -8,14 +8,14 @@ const newsData = [
     id: 1,
     title: 'Where does it come from?',
     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis natus illo consequuntur, quia eos soluta iure sunt cum a saepe sed harum, sint eius error sapiente ipsam nulla atque cumque?',
-    image: 'src/assets/news1.jpg',
+    image: 'src/assets/newsImg/news1.jpg',
     category: 'Technology',
   },
   {
     id: 2,
     title: 'There are many variations of passages',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ipsam error perspiciatis quisquam neque optio culpa, saepe dolor at debitis beatae omnis tempora, praesentium cumque aut officia sapiente, reiciendis ea.',
-    image: 'src/assets/news2.jpg',
+    image: 'src/assets/newsImg/news2.jpg',
     category: 'Fashion',
   },
   {
@@ -23,16 +23,16 @@ const newsData = [
     title:
       'It is a long established fact that a reader It has roots in a piece of...',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, veritatis repudiandae, consequatur velit eos, quod ducimus facilis dignissimos a voluptates iste ut. Blanditiis obcaecati dolorum ratione quas doloribus repellat ex.',
-    image: 'src/assets/news3.jpg',
+    image: 'src/assets/newsImg/news3.jpg',
     category: 'Technology',
   },
 ]
 
 const carouselImages = [
-  'src/assets/carousel1.jpg',
-  'src/assets/carousel2.jpg',
-  'src/assets/carousel3.jpg',
-  'src/assets/carousel4.jpg',
+  'src/assets/carouselImg/carousel1.jpg',
+  'src/assets/carouselImg/carousel2.jpg',
+  'src/assets/carouselImg/carousel3.jpg',
+  'src/assets/carouselImg/carousel4.jpg',
 ]
 
 export default function News() {
@@ -78,14 +78,15 @@ export default function News() {
                 key={item.id}
                 className='bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col'
               >
-                {/* Ảnh */}
+                {/* Image */}
                 <img
                   src={item.image}
                   alt={item.title}
                   className='w-full h-48 object-cover'
+                  loading='lazy'
                 />
 
-                {/* Nội dung */}
+                {/* Content */}
                 <div className='flex flex-col flex-grow p-4'>
                   <h3 className='text-lg line-clamp-2 lg:min-h-[3.5rem] uppercase font-extrabold'>
                     {item.title}
@@ -97,8 +98,6 @@ export default function News() {
               </div>
             ))}
           </div>
-
-          {/* Carousel auto-scroll */}
         </div>
       </Section>
       <div className='overflow-hidden relative mb-20'>
@@ -113,6 +112,7 @@ export default function News() {
               src={src}
               alt={`carousel-${i}`}
               className='w-auto h-[300px] lg:h-[400px] object-cover rounded-lg flex-shrink-0'
+              loading='lazy'
             />
           ))}
         </motion.div>

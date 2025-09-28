@@ -15,7 +15,7 @@ export default function Footer() {
 
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className='w-9 h-9 flex items-center justify-center rounded bg-gray-700 hover:bg-primary border-white border text-white transition duration-200 absolute right-10 top-1/2 -translate-y-1/2 lg:static lg:order-2 lg:translate-y-0'
+          className='w-9 h-9 flex items-center justify-center rounded bg-gray-700 hover:bg-primary border-white border text-white transition duration-300 absolute right-10 top-1/2 -translate-y-1/2 lg:static lg:order-2 lg:translate-y-0'
         >
           <ArrowUp size={18} />
         </button>

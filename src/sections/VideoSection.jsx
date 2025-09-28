@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X } from 'lucide-react'
-import bgVideo from '../assets/bg-video.jpg'
+import bgVideo from '../assets/productsImg/bg-video.jpg'
 
 export default function VideoSection() {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,6 +13,7 @@ export default function VideoSection() {
           src={bgVideo}
           alt='Video Background'
           className='w-full h-full object-cover object-center'
+          loading='lazy'
         />
         <div className='absolute inset-0 bg-black/50'></div>
 
@@ -21,11 +22,13 @@ export default function VideoSection() {
           <h2 className='text-primary text-3xl lg:text-5xl font-extrabold mb-4 max-w-3xl lg:w-[40%] uppercase tracking-widest'>
             We Do The Design of Any Complexity
           </h2>
+
           <p className='text-gray-200 max-w-2xl mb-6 lg:w-[40%] leading-relaxed'>
             Wooder utilizes materials otherwise left behind, rendered useless in
             their original intent. By creating new pieces made of reclaimed
             barnwood.
           </p>
+
           <button
             onClick={() => setIsOpen(true)}
             className='relative inline-flex items-center gap-2 px-8 py-3 font-semibold uppercase border border-white text-white hover:bg-primary  hover:text-white transition-all duration-300 active:scale-80'
@@ -52,7 +55,7 @@ export default function VideoSection() {
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
-              {/* Close button (nằm ở góc video) */}
+              {/* Close button */}
               <button
                 onClick={() => setIsOpen(false)}
                 className='absolute top-0 right-0 px-3 py-2 bg-primary text-white hover:opacity-90 transition'
@@ -63,7 +66,7 @@ export default function VideoSection() {
               <iframe
                 width='100%'
                 height='100%'
-                src='https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1'
+                src='https://www.youtube.com/embed/pHwRrE14cjE?autoplay=1'
                 title='Video'
                 allow='autoplay; encrypted-media'
                 allowFullScreen

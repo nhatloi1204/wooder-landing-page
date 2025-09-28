@@ -3,11 +3,11 @@ import Section from '../components/Section'
 import { ZoomIn, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-import img1 from '../assets/gallery1.jpg'
-import img2 from '../assets/gallery2.jpg'
-import img3 from '../assets/gallery3.jpg'
-import img4 from '../assets/gallery4.jpg'
-import img5 from '../assets/gallery5.jpg'
+import img1 from '../assets/galleryImg/gallery1.jpg'
+import img2 from '../assets/galleryImg/gallery2.jpg'
+import img3 from '../assets/galleryImg/gallery3.jpg'
+import img4 from '../assets/galleryImg/gallery4.jpg'
+import img5 from '../assets/galleryImg/gallery5.jpg'
 
 function GalleryItem({ src, alt, onClick, className = '' }) {
   return (
@@ -20,6 +20,7 @@ function GalleryItem({ src, alt, onClick, className = '' }) {
         src={src}
         alt={alt}
         className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
+        loading='lazy'
       />
 
       {/* Overlay */}
@@ -71,9 +72,7 @@ function Gallery() {
         </div>
       </div>
 
-      {/* Gallery grid */}
-
-      {/* Modal Lightbox */}
+      {/* Modal Image */}
       <AnimatePresence>
         {selectedImg && (
           <motion.div
