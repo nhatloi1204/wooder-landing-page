@@ -1,16 +1,55 @@
-# React + Vite
+# 🌲 Wooder Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive **landing page** built with **React + Vite** and styled
+using **TailwindCSS**.  
+This project focuses on clean UI/UX, smooth animations, and responsive design
+for both desktop and mobile.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 **Responsive Design** — optimized for desktop, tablet, and mobile.
+- 🖼 **Image Carousel & Gallery** — built with **Swiper** and custom styling.
+- ✨ **Animations** — powered by **Framer Motion** for smooth transitions.
+- 📰 **Dynamic News Section** — card layout with hover effects and equal height
+  fixes.
+- 🎥 **Modal Video Support** — watch video directly in-page with overlay.
+- ⬆️ **Scroll-to-Top Button** — accessible, smooth scroll with hover state.
+- 🔗 **Active Navbar Highlight** — using Intersection Observer API.
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ⚡ **React + Vite**
+- 🎨 **Tailwind CSS**
+- 🎞 **Framer Motion**
+- 🎠 **Swiper.js**
+- 🖼 **Lucide-react** (icons)
 
-## Expanding the ESLint configuration
+## 📸 Screenshots
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Desktop
+
+![Desktop Preview](./screenshots/desktop.png)
+
+### Mobile
+
+![Mobile Preview](./screenshots/mobile.png)
+
+## 📂 Project Structure
+
+src/ ├── assets/ # Images, SVGs, icons ├── components/ # Reusable UI components
+├── sections/ # Page sections (Hero, About, Gallery, News, Footer, etc.) ├──
+data/ # Static JSON-like data (news, gallery, etc.) ├── App.jsx └── main.jsx
+
+## ⚙️ Installation & Usage
+
+```bash
+# Clone repository
+git clone https://github.com/nhatloi1204/wooder-landing-page.git
+
+# Install dependencies
+cd wooder-landing-page
+npm install
+
+# Start development
+npm run dev
+```
