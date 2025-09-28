@@ -4,6 +4,7 @@ import ProductsSection from '../sections/Products'
 import About from '../sections/About'
 import Gallery from '../sections/Gallery'
 import News from '../sections/News'
+import Footer from '../components/Footer'
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
       <About />
       <Gallery />
       <News />
+      <Footer />
     </>
   )
 }
